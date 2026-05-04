@@ -14,7 +14,7 @@ df["species"] = iris.target
 # 2                4.7               3.2  ...               0.2        0
 # 3                4.6               3.1  ...               0.2        0
 # 4                5.0               3.6  ...               0.2        0
-# print(df.head())
+print(df.head())
 
 # Output:
 # <class 'pandas.DataFrame'>
@@ -30,7 +30,7 @@ df["species"] = iris.target
 # dtypes: float64(4), int64(1)
 # memory usage: 6.0 KB
 # None
-# print(df.info())
+print(df.info())
 
 # Output:
 # sepal length (cm)    0
@@ -39,7 +39,7 @@ df["species"] = iris.target
 # petal width (cm)     0
 # species              0
 # dtype: int64
-#print(df.isnull().sum())
+print(df.isnull().sum())
 
 # Output:
 #        sepal length (cm)  sepal width (cm)  petal length (cm)  petal width (cm)     species
@@ -51,7 +51,7 @@ df["species"] = iris.target
 # 50%             5.800000          3.000000           4.350000          1.300000    1.000000
 # 75%             6.400000          3.300000           5.100000          1.800000    2.000000
 # max             7.900000          4.400000           6.900000          2.500000    2.000000
-#print(df.describe())
+print(df.describe())
 
 encoder = LabelEncoder()
 df["species"] = encoder.fit_transform(df["species"])
